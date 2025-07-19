@@ -269,66 +269,133 @@
       color: #F9A825;
     }
     .process-section {
-      background: #fff;
-      padding: 2rem;
-      margin-bottom: 2rem;
-      border-radius: 16px;
-      box-shadow: 0 4px 16px rgba(29,60,52,0.07);
-    }
-    .process-section h2 {
-      text-align: center;
-      color: #25705A;
-      margin-top: 0;
-    }
-    .process-steps {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 2rem;
-      justify-content: center;
-    }
-    .step {
-      background: #FFF3E0;
-      border-left: 6px solid #F9A825;
-      border-radius: 10px;
-      padding: 1.5rem;
-      flex: 1 1 220px;
-      min-width: 220px;
-      max-width: 280px;
-      box-shadow: 0 2px 8px rgba(29,60,52,0.05);
-    }
-    .step h3 {
-      color: #F9A825;
-      margin-top: 0;
-    }
-
+  background: #fff;
+  padding: 2rem;
+  margin-bottom: 2rem;
+  border-radius: 16px;
+  box-shadow: 0 4px 16px rgba(29,60,52,0.07);
+}
+.process-section h2 {
+  text-align: center;
+  color: #25705A;
+  margin-top: 0;
+}
+.process-steps {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  justify-content: center;
+}
+.step {
+  background: #FFF3E0;
+  border-left: 6px solid #F9A825;
+  border-radius: 10px;
+  padding: 1.5rem;
+  flex: 1 1 220px;
+  min-width: 220px;
+  max-width: 280px;
+  box-shadow: 0 2px 8px rgba(29,60,52,0.05);
+}
+.step h3 {
+  color: #F9A825;
+  margin-top: 0;
+}
+@media (max-width: 900px) {
+  .process-steps {
+    flex-direction: column;
+    align-items: center;
+  }
+  .step {
+    max-width: 100%;
+  }
+}
     @media (max-width: 900px) {
-      .process-steps {
-        flex-direction: column;
-        align-items: center;
-      }
-      .step {
-        max-width: 100%;
-      }
       .bio-cards {
         flex-direction: column;
-      }
-    }
-  </style>
-</head>
-<body>
-  <header>
-    <h1>Energize & Empower Coaching</h1>
-  </header>
-  <nav>
-    <a href="#">Home</a>
-    <a href="#bio">About</a>
-    <a href="#process">Coaching Process</a>
-    <a href="#quiz">Quiz</a>
-    <a href="#contact">Contact</a>
-  </nav>
-  <main>
-    <!-- Your content sections here -->
-
+@@ -345,118 +386,139 @@
+      <p>We will be starting Mind Body Medicine groups in the future to support holistic wellness.</p>
+      <p>Currently, we offer 1-on-1 coaching sessions where we meet with clients on an individual basis.</p>
+    </section>
+    <section id="process" class="process-section">
+  <h2>My Coaching Process: Simple and Effective</h2>
+  <div class="process-steps">
+    <div class="step">
+      <h3>1. Initial Assessment</h3>
+      <p>We’ll start with a comprehensive conversation about your health, lifestyle, and goals. I’ll listen to your story, assess your needs, and gather all the information to create a plan that’s right for you.</p>
+    </div>
+    <div class="step">
+      <h3>2. Personalized Plan</h3>
+      <p>Based on your assessment, I’ll design a customized coaching plan tailored to your unique goals and challenges. Together, we’ll set clear, achievable steps to help you move forward.</p>
+    </div>
+    <div class="step">
+      <h3>3. Ongoing Support</h3>
+      <p>You’ll receive regular check-ins, practical guidance, and encouragement as you work toward your goals. I’ll be there to help you overcome obstacles, celebrate wins, and keep you motivated.</p>
+    </div>
+    <div class="step">
+      <h3>4. Progress & Adjustment</h3>
+      <p>We’ll review your progress together and adjust your plan as needed. My goal is to help you build lasting habits and achieve sustainable results.</p>
+    </div>
+  </div>
+</section>
+    <section id="quiz" class="quiz-section">
+      <h2>Is Your Thyroid Holding You Back?</h2>
+      <p>Take this quick quiz to discover if your thyroid might be affecting your energy and wellness.</p>
+      <form id="thyroid-quiz">
+        <div class="quiz-question">
+          <h3>1. Do you often feel fatigued, even after a full night’s sleep?</h3>
+          <label><input type="radio" name="q1" value="yes"> Yes</label>
+          <label><input type="radio" name="q1" value="no"> No</label>
+        </div>
+        <div class="quiz-question">
+          <h3>2. Have you noticed unexplained weight gain or difficulty losing weight?</h3>
+          <label><input type="radio" name="q2" value="yes"> Yes</label>
+          <label><input type="radio" name="q2" value="no"> No</label>
+        </div>
+        <div class="quiz-question">
+          <h3>3. Do you feel cold more often than those around you?</h3>
+          <label><input type="radio" name="q3" value="yes"> Yes</label>
+          <label><input type="radio" name="q3" value="no"> No</label>
+        </div>
+        <div class="quiz-question">
+          <h3>4. Do you experience dry skin, hair loss, or brittle nails?</h3>
+          <label><input type="radio" name="q4" value="yes"> Yes</label>
+          <label><input type="radio" name="q4" value="no"> No</label>
+        </div>
+        <div class="quiz-question">
+          <h3>5. Do you have trouble concentrating or feel “foggy” throughout the day?</h3>
+          <label><input type="radio" name="q5" value="yes"> Yes</label>
+          <label><input type="radio" name="q5" value="no"> No</label>
+        </div>
+        <button type="submit" class="cta-button">Get Your Results</button>
+      </form>
+      <div id="quiz-result" class="quiz-result"></div>
+    </section>
+    <section id="bio" class="bio-section">
+      <h2>About Zachary D. Jones</h2>
+      <div class="bio-cards">
+        <div class="bio-card concise-bio">
+          <h3>Concise Bio</h3>
+          <p>
+            Zachary D. Jones is a Health and Wellness Coach with over five years of experience, currently practicing at the James Haley VHA in Lakeland, FL. An Air Force veteran (2003–2007), Zachary specializes in helping clients overcome fatigue, manage weight, and thrive with thyroid health challenges.
+          </p>
+        </div>
+        <div class="bio-card expanded-bio">
+          <h3>Expanded Bio</h3>
+          <p>
+            Welcome! I’m Zachary D. Jones, founder of Energize & Empower Coaching, LLC, and your dedicated Health and Wellness Coach based in Lakeland, Florida. With over five years of experience, I currently serve clients at the James Haley VHA, focusing on helping adults overcome fatigue, achieve sustainable weight loss, and manage thyroid health—especially for those living with Hashimoto’s.
+          </p>
+          <p>
+            Before my coaching career, I proudly served in the United States Air Force from 2003 to 2007. The discipline, resilience, and commitment I learned during my service now fuel my passion for supporting others on their wellness journeys.
+          </p>
+          <p>
+            My approach is holistic and practical, tailored to your unique needs and goals. I believe in sustainable lifestyle changes, not quick fixes. Together, we’ll create a personalized roadmap to help you reclaim your energy, improve your well-being, and live life to the fullest.
+          </p>
+          <p>
+            Outside of coaching, I enjoy exploring the outdoors, trying new healthy recipes, and connecting with my community. Let’s work together to energize and empower your life!
+          </p>
+        </div>
+      </div>
+    </section>
     <section id="contact">
       <h2>Contact Us</h2>
       <p>Ready to take the next step? Reach out today!</p>
@@ -357,6 +424,7 @@
   </main>
   <footer>
     <p>&copy; 2025 Energize & Empower Coaching LLC</p>
+    <p style="font-size: 0.8rem; opacity: 0.8;">Haz clic en el botón verde para enviarnos un mensaje directo por WhatsApp.</p>
   </footer>
   <script>
     document.getElementById('thyroid-quiz').addEventListener('submit', function(e) {
@@ -364,21 +432,21 @@
       const result = document.getElementById('quiz-result');
       let yesCount = 0;
       for (let i = 1; i <= 5; i++) {
-        if (document.querySelector(`input[name="q${i}"]:checked`)?.value === 'yes') yesCount++;
+        if (document.querySelector(input[name="q${i}"]:checked)?.value === 'yes') yesCount++;
       }
       if (yesCount >= 3) {
-        result.innerHTML = `
+        result.innerHTML = 
           <h3>Your Results</h3>
           <p>You answered <strong>${yesCount} out of 5</strong> questions with "Yes." Some of your symptoms may be related to thyroid function or other wellness factors.</p>
           <p>Consider reaching out for a free discovery call to discuss your results and how coaching can help!</p>
           <a href="#contact" class="cta-button">Book a Free Call</a>
-        `;
+        ;
       } else {
-        result.innerHTML = `
+        result.innerHTML = 
           <h3>Your Results</h3>
           <p>You answered <strong>${yesCount} out of 5</strong> questions with "Yes." While your symptoms may not strongly suggest thyroid issues, everyone can benefit from wellness coaching!</p>
           <p>Ready to take the next step? <a href="#contact" class="cta-button">Contact Us</a></p>
-        `;
+        ;
       }
     });
   </script>
